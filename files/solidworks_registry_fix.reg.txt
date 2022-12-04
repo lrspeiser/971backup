@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+[-HKEY_CLASSES_ROOT\SldAssem.Document\shellex\IconHandler]
+[HKEY_CLASSES_ROOT\SldAssem.Document\shellex\IconHandler_removed_for_SVN_to_work]
+@="yes"
+[-HKEY_CLASSES_ROOT\SldPart.Document\shellex\IconHandler]
+[HKEY_CLASSES_ROOT\SldPart.Document\shellex\IconHandler_removed_for_SVN_to_work]
+@="yes"
