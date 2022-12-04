@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>FRC Bingo Card</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="shortcut icon" href="http://robotics.mvla.net/files/favicon.ico" type="image/vnd.microsoft.icon" />
+
+<style type="text/css">body {
+    font-family:Verdana,arial,helvetica,sans-serif;
+}
+.left {
+    float:left;
+}
+.right {
+    float:right;
+}
+.clear {
+    clear:both;
+}
+.red {
+    text-align:center;
+    color:red;
+}
+.bingo {
+    border:4px solid blue;
+    border-collapse:collapse;
+    font-size:18px;
+    margin:auto;
+}
+.bingo td {
+    width:130px;
+    height:80px;
+    border:2px solid red;
+    padding:4px;
+    text-align:center;
+}
+.header {
+    color:white;
+    background-color:blue;
+    font-weight:bold;
+    height:1em;
+    font-size:2em;
+}
+.freecell {
+    font-weight:bold;
+    text-shadow:1px 1px 3px white, -1px -1px 3px white;
+    background-image:url('http://www.usfirst.org/sites/all/themes/first_core/logo.png');
+    background-repeat:no-repeat;
+}
+
+@media print {
+    hr {page-break-before:always;}
+}
+</style>
+
+<script type="text/javascript">
+window.onload = function() { insertFirstBingoCard(); }
+
+var buzzwords = [
+"big/hard problem(s)",
+"celebrate",
+"change", // change the culture
+"college",
+"community",
+// "companies",
+"competition",
+"co-opertition",
+"culture",
+"creative(ity)",
+"design",
+// "Dean",
+"Dean's homework",
+"engineer(ing)",
+// "excitement",
+"focus",
+"fun",
+"future",
+// "goal",
+"gracious professionalism",
+"heroes",
+"impact",
+"inspiration",
+// "jobs",
+"leader(ship)",
+"measure/ metric",
+"mentor",
+"mission",
+"NASA",
+// "news",
+"precision",
+"process",
+"role model",
+"safety",
+"scholarship",
+"science & technology",
+"society",
+"STEM",
+"supporter",
+"teammate/ teamwork",
+"values"
+// "Woodie"
+];
+
+function permuteList(list) {
+    for (var i = 1; i < list.length; i++){
+        var j = Math.floor(Math.random() * i);
+        if (i != j) {var swap = list[i]; list[i] = list[j]; list[j] = swap;}
+    }
+}
+
+function toggleCellBackground() {
+    if (this.style.backgroundColor) {
+        this.style.backgroundColor = '';
+        this.style.backgroundPosition = '0px 0px';
+    } else {
+        this.style.backgroundColor = '#999999';
+        this.style.backgroundPosition = '1000px 1000px';
+    }
+}
+
+function generateBingoCard() {
+    var row = [];
+    var cell = [];
+    var num_rows = 5;
+    var midway = Math.floor(num_rows / 2);
+
+    permuteList(buzzwords);
+    var terms = buzzwords.slice(0, 24);
+
+    var tab = document.createElement('table');
+    tab.setAttribute('class', 'bingo');
+    var tbo = document.createElement('tbody');
+
+    var headerRow = document.createElement('tr');
+    headerRow.setAttribute('class', 'header');
+    var bingo = 'BINGO';
+    var index = 0;
+    for (index = 0; index < bingo.length; index++) {
+        var hdrCell = document.createElement('td');
+        var node = document.createTextNode(bingo.charAt(index));
+        hdrCell.appendChild(node);
+        headerRow.appendChild(hdrCell);
+    }
+    tbo.appendChild(headerRow);
+
+    index = 0;
+    for (var c = 0; c < num_rows; c++){
+        row[c] = document.createElement('tr');
+        for (k = 0; k < num_rows; k++) {
+            cell[k] = document.createElement('td');
+            var term = '';
+            if (c == midway && k == midway) {
+                term = 'robot'; // nearly a free cell
+                cell[k].setAttribute('class', 'freecell');
+            } else {
+                term = terms[index++];
+            }
+            var node = document.createTextNode(term);
+            cell[k].appendChild(node);
+            cell[k].onclick = toggleCellBackground;
+            row[c].appendChild(cell[k]);
+        }
+        tbo.appendChild(row[c]);
+    }
+    tab.appendChild(tbo);
+    return tab;
+}
+
+function insertFirstBingoCard() {
+    var firstcard = generateBingoCard();
+    var site = document.getElementById('first_card');
+    site.innerHTML = '';
+    site.appendChild(firstcard);
+
+    // pastehtml.com shows the bingo page in an iframe which breaks printing
+    // in most browsers -- but not Safari! As a workaround on pastehtml.com,
+    // offer a link to the Spartan Robotics bingo page.
+    if (document.location.host != 'pastehtml.com') {
+        var note = document.getElementById('pastehtml_note');
+        note.innerHTML = '';
+    }
+}
+
+function appendAnotherBingoCard() {
+    var hr = document.createElement('hr');
+    document.getElementById('more_cards').appendChild(hr);
+    document.getElementById('more_cards').appendChild(generateBingoCard());
+}
+
+</script>
+
+<body>
+
+<div class="left">
+<a rel="home" href="http://spartanrobotics.org/" target="_top" title="Home">
+    <img src="http://robotics.mvla.net/files/frc/logo_0.png" alt="Home" width="50" height="50" />
+</a>
+</div>
+
+<h1 class="red">2013
+<a href="http://www.usfirst.org/roboticsprograms/frc" alt="FRC" target="_top">FRC</a>
+<a href="http://www.thebluealliance.com" target="_top">Kickoff</a>
+Bingo Card</h1>
+
+<div class="clear"></div>
+<form>
+    <b>Watch the <a href="http://www.thebluealliance.com/" target="_top">FIRST Kickoff Live via the Blue Alliance</a>.</b>
+    <button type="button" onClick="insertFirstBingoCard()">Roll again</button>
+    <button type="button" onClick="appendAnotherBingoCard()">Add a page</button>
+    <a href="http://pastehtml.com/info/1cojydn.html">Comments?</a>
+</form>
+
+<div class="left">
+<div id="first_card"></div>
+<p id="pastehtml_note">Printing problems? Use <a href="http://robotics.mvla.net/files/frc/frc-bingo.html" target="_top">Spartan Robotics</a> instead.</p>
+</div>
+
+<div class="right">
+<a class="twitter-timeline" data-dnt=true href="https://twitter.com/search?q=%23omgrobots+OR+%23FRCkickoff" data-widget-id="247912427243585537">Tweets about "#omgrobots OR #FRCkickoff"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<p class="red">Tweet #FRCkickoff BINGO! when you get 5 in a line.</p>
+</div>
+
+<div class="clear"></div>
+<div id="more_cards"></div>
+
+</body>
+</html>
