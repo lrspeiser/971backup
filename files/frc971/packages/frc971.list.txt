@@ -1,0 +1,25 @@
+# Put this file in /etc/apt/sources.list.d to use this repository.
+# You will need to run that as root.
+# After doing that, (also as root) run `apt-get update` and then you can start installing packages.
+#
+# IMPORTANT: You must be running an amd64 machine for the packages here to work.
+
+# You should have the contents of exactly 1 of these sections uncommented.
+
+# For Debian 9 Stretch:
+deb [arch=amd64] http://robotics.mvla.net/files/frc971/packages stretch main
+deb http://http.debian.net/debian stretch-backports main
+
+# For Debian 8 Jessie:
+#deb http://robotics.mvla.net/files/frc971/packages jessie main
+#deb http://http.debian.net/debian jessie-backports main
+
+# For Debian 7 Wheezy:
+# Remember to `dpkg --add-architecture i386` too
+#deb http://robotics.mvla.net/files/frc971/packages wheezy main
+
+# For Debian 6 Squeeze:
+#deb http://robotics.mvla.net/files/frc971/packages squeeze main
+
+# For Ubuntu 12 Precise Pangolin:
+#deb http://robotics.mvla.net/files/frc971/packages precise main

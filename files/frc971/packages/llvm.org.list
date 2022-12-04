@@ -1,0 +1,12 @@
+# A convenient summary of <http://llvm.org/apt/>.
+
+# Put this file in /etc/apt/sources.list.d to use this repository.
+# You will need to run that as root.
+# After doing that, (also as root) run `apt-get update` and then you can start installing packages.
+
+# To add the key so you don't get warnings, `wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -`.
+
+deb http://llvm.org/apt/jessie/ llvm-toolchain-jessie-3.6 main
+deb-src http://llvm.org/apt/jessie/ llvm-toolchain-jessie-3.6 main
+deb http://llvm.org/apt/jessie/ llvm-toolchain-jessie-3.7 main
+deb-src http://llvm.org/apt/jessie/ llvm-toolchain-jessie-3.7 main
