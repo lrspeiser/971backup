@@ -1,0 +1,549 @@
+ <div class="content">
+    <form action="cad.html" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-FnWmPuJhkPM0WGGgMA6PgHaz0uHjP4REnwopZJFNuwc" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+</div>
+<div id="block-menu-block-2" class="block block-menu-block">
+
+    
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <menu><ul><li class="first leaf menu-mlid-763"><a href="index.html" title="Front page">Home</a></li>
+<li class="leaf menu-mlid-395"><a href="happenings.html" title="Articles and photos of what&#039;s happening on our team.">Happenings</a></li>
+<li class="leaf menu-mlid-623"><a href="content/calendars.html" title="What&#039;s happening next for members of our team.">Calendar</a></li>
+<li class="leaf has-children menu-mlid-784"><a href="content/resources-map.html" title="Describes pages in the Resources group.">Resources</a></li>
+<li class="leaf has-children menu-mlid-396"><a href="content/about.html">About</a></li>
+<li class="last leaf menu-mlid-449"><a href="contact.html" title="">Contact</a></li>
+</ul></menu></div>
+  </div>
+</div>
+  </div>
+</div>
+
+
+
+<div id="content"><div class="wrap">
+    
+    <div class="section primary">
+                <h1 class="title">
+            CAD Download Form        </h1>
+        
+                <menu class="tabs">
+                    </menu>
+        
+        
+        
+          <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-2345" class="node node-page clearfix">
+
+  
+      
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- I work on this page outside of Drupal in /var/www/spartanrobotics/testing/cad_downloads.html
+     and then copy and paste the text into this page.
+     Michael Schuh
+     August 17, 2014
+  -->
+<!-- Saikiran, a friend of Megan and mentor on Code Orange 3476, told us that the page would not scroll left-right
+      on his phone.  He gave us the following .block style fix for this.  We installed it Dec 31, 2017.  Michael
+ -->
+<style>.block{overflow: auto;} </style>
+
+<html>
+
+<head>
+<title>FRC 971 CAD Download Form </title>
+
+<script>
+  // Set this "CAD_TESTING" for download events with names like "CAD_TESTING_2014".
+  var googleAnalyticsEventLinkBasename;
+  googleAnalyticsEventLinkBasename = "CAD_TESTING";
+  googleAnalyticsEventLinkBasename = "Download-CAD";
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  // Why did you use -2 instead of -1?  Michael July 23, 2014: 8:39 pm
+  // The -2 is for iron.  Use -1.  Michael Aug 17, 2014
+  ga('create', 'UA-52801009-1', 'auto');
+  ga('send', 'pageview');
+
+  var trackOutboundLink = function(url) {
+    ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+      function () {
+        document.location = url;
+      }
+    });
+  }
+
+  startTime = new Date().getTime();
+
+</script>
+
+
+<script>
+
+  function javascriptEnabled(){
+    // Comment out the next alert to see what the page looks like for non JavaScript Users
+    // alert('This shows what the page looks like to those without javascript enabled.  Click OK to see the page with javascript enabled. This box will be removed in the end');
+    var tohide = document.getElementsByClassName('javascriptDisclamer');
+    for(var i = 0; i<tohide.length ; i++){
+        tohide[i].style.display='none';
+    }
+    //document.getElementById('javascriptDisclamer').style.display='none';
+    //checkifshow();
+  }
+
+//window.onload = javascriptEnabled;
+window.onload = checkifshow;
+currentYear = (new Date()).getFullYear();
+
+function isIntegerOrNa(strval) {
+  return (((parseInt(strval) + "") == strval) || strval == "N/A" || strval == "n/a" || strval == 'na');
+}
+
+function isValidRookieYear(strval) {
+  var year = parseInt(strval);
+  return (year >= 1989 && year <= currentYear+1);
+}
+
+function isNa(strval) {
+    return ( strval == "N/A" || strval == "n/a" || strval == 'na');
+}
+
+
+function checkFilled() {
+  var teamNumber = document.getElementById('teamNumber');
+  var rookieYear = document.getElementById('rookieYear');
+  var otherComment = document.getElementById('otherComment');
+  if (!isIntegerOrNa(teamNumber.value)) {
+    ga('send', 'event', 'error', 'team_number_error', teamNumber.value);
+    alert('Please enter a FRC team number, or N/A if not associated with an FRC team'); 
+    return false;
+  }
+  else if (!isNa(rookieYear.value) && !isValidRookieYear(rookieYear.value)) {
+      ga('send', 'event', 'error', 'rookie_year_error', rookieYear.value);
+      alert('Please enter a valid rookie year between 1989 and '+(currentYear+1)+', or enter N/A if not associated with an FRC team');
+      return false;
+  }
+
+  else if (otherComment.value.length>250) {
+    ga('send', 'event', 'error', 'other_comment_error', otherComment.value.lenth);
+    alert('Other comment is limited to 250 characters.  You currently have ' + otherComment.value.length + ' characters.'); 
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+
+function noAlert(e){
+  if(!e){
+    e = window.event;
+  }
+  e.stopPropagation();
+}
+
+function checkifshow(){
+  var teamNumber = document.getElementById('teamNumber');
+  var rookieYear = document.getElementById('rookieYear');
+  var showDownloads = document.getElementById('showDownloads');
+  if (teamNumber.value != "" && rookieYear.value != ""){
+    //showDownloads.style.display = "block";
+    showDownloads.className = 'show';
+    showDownloads.title='';
+  }else{
+    showDownloads.className = 'disable';
+    showDownloads.title='Please provide answers to the questions above to activate the download links.';
+  }
+ 
+
+}
+
+// This function is called when the form is submitted.
+// It creates an "event" for the Google Analytics site to track the CAD year request.
+function downloadFile(year){
+  if(checkFilled()){
+    document.getElementById('cadYear').value=year; 
+
+    var endTime = new Date().getTime();
+    var timeSpent = endTime - startTime;
+
+    // Pass the time spent to the cgi script.
+    document.getElementById('timeOnPage').value=timeSpent;
+
+    var eventName = googleAnalyticsEventLinkBasename + '_'+year;
+    // Pass the Google Analytics Event name to the cgi script.
+    document.getElementById('eventName').value=eventName;
+
+    // Call Google Analytics
+    ga('send', {
+    'hitType': 'timing',
+    'timingCategory': 'UserInteraction',
+    'timingVar': 'PageCompletion',
+    'timingValue': timeSpent,
+    'hitCallback':
+      function () {
+        ga('send', 'event', 'outbound', 'click', eventName, {'hitCallback':
+          function () {
+            document.getElementById('form-id').submit();
+          }
+        });
+      }
+    });
+    alert("It takes the server about 12 seconds to process the file and start downloading it once you close this window.  \n\nPlease be patient.\n\nPlease don't click on the link multiple times since this hammers the server and delays when your download starts.");
+  }
+}
+
+function disabledHelp(cur){
+        if(cur.className == 'disable'){
+                alert('Please provide answers to the team number and rookie year questions to activate the download links.');
+        }
+}
+
+</script>
+
+<style>.disable a:not(.info) {
+        pointer-events: none;
+        cursor: default;
+        color:#909090;
+    }
+    .show a:not(.info){
+        pointer-events:auto;
+        cursor:auto;
+        color:blue;
+    }
+    .required {
+        color:red;
+    }
+body {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+}
+#main_page {
+        width : 1010px;
+        margin-left: auto ;
+        margin-right: auto ;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #330099; 
+        position:relative;
+
+}
+#content_box_text {
+        float : left;
+        padding : 10px;
+        font-family: Arvo, Helvetica, sans-serif;
+        font-size: 13px;
+}
+#content_box {
+        float : left;
+        padding : 10px;
+        font-family: Arvo, Helvetica, sans-serif;
+        font-size: 18px;
+}
+
+</style>
+
+
+</head>
+<body>
+<div id="main_page" style="height:50px;border-width:0px">
+</div>
+<div id="main_page" style="height:1000px;width:800px;background-color:white;border-width:0px">
+<div id="content_box_text">
+<h1>971 CAD Download Page</h1>
+
+<p>We are providing our robot CAD files with the hope that teams will be able to use it to
+learn more about how our robots are made and then build better robots themselves.
+We are asking some questions before download so we can better understand if we are achieving our
+goal of helping teams by providing our CAD.
+For questions or comments, please use the comments box below or 
+our team <a href="contact.html">contact form</a> (select "CAD" in the "Category" drop
+down menu so the correct person gets your message).
+</p>
+
+<p class="javascriptDisclamer">
+<b><span class="required">This page requires javascript for form submition and download to work.  Please enable javascript.</span></b>
+</p>
+<script>
+javascriptEnabled()
+</script>
+
+<form method="post" id="form-id" action="cgi-bin/cadDownloadRequestRB.cgi.html">
+  <input id="timeOnPage" name="timeOnPage" type="hidden"/>
+  <input id="eventName" name="eventName" type="hidden"/>
+
+  <p>
+    <label for="teamNumber"> <span class="required">*</span>  What is your
+      <a href="http://www.usfirst.org/roboticsprograms/frc">FRC team</a> number?  <br>
+    <input type="text" name="teamNumber" id="teamNumber" onchange="checkifshow()" onkeydown="checkifshow()"/></label>
+    <i>(Put "N/A" (not applicable) if you don't have a team number or don't want to provide it.)</i>
+  </p>
+
+  <p>
+    <label for="rookieYear"> <span class="required">*</span> 
+    What was your personal rookie year in FRC?  If you started with an FRC team in 2012
+    and your team started in 1989, put "2012" in the text box.  <br>
+    <input type="text" name="rookieYear" id="rookieYear" onchange="checkifshow()" onkeydown="checkifshow()" /></label>
+    <i>(Put "N/A" if you don't want to provide it.)</i>
+  </p>
+
+  <p>
+    <label for="otherComment">    Please enter any other comments you have or 
+    information you want to tell us. <i>(Optional with 250 character limit)</i>
+    <br>
+    <textarea name="otherComment" cols="100" rows="2" id="otherComment" 
+       class="html-text-box"></textarea><br>
+    </label>
+  </p>
+
+  <input type="text" name="cadYear" id="cadYear" value="" style="display:none;"/>
+
+  <div id="showDownloads" class='show' onclick='disabledHelp(this)'>
+
+    <!-- 2019 Season -->
+    <div id="content_box" style="width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2019_Robot.png" width="100" border="0" align="left" alt="2019 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+      <p> 
+        Robot name: Tachyon<br>
+        <a href="#" onclick="downloadFile('2019');">Download 2019 CAD (152 MBytes) for STEP version the robot we took to the championship event</a><br>
+        <a href="#" onclick="downloadFile('2019native');">Download 2019 CAD (260 MBytes) for Native SolidWorks 2018 version the robot we took to the championship event</a><br>
+        <a href="#" onclick="downloadFile('2019parts_library');">Download 2019 CAD Parts Library (309 MBytes)</a>
+      </p>
+      </div>
+    </div>
+
+    <!-- 2018 Season -->
+    <div id="content_box" style="width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2018_Robot.png" width="100" border="0" align="left" alt="2018 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+      <p> 
+        Robot name: Curiosity<br>
+        <a href="#" onclick="downloadFile('2018');">Download 2018 CAD (152 MBytes) for STEP version the robot we took to the championship event</a><br>
+        <a href="#" onclick="downloadFile('2018native');">Download 2018 CAD (260 MBytes) for Native SolidWorks 2017 version the robot we took to the championship event</a><br>
+        <a href="#" onclick="downloadFile('2018third');">Download 2018 CAD for Third Robot (72 MBytes)</a><br>
+        More <a class="info" onclick="noAlert(event)" href="content/team-documents.html#2018Details">information and details</a> about the 2018 robot.
+      </p>
+      </div>
+    </div>
+
+    <!-- 2017 Season -->
+    <div id="content_box" style="width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2017_Robot_100x100.jpg" width="100" border="0" align="left" alt="2017 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+      <p> 
+        Robot name: Fyn<br>
+        <a href="#" onclick="downloadFile('2017');">Download 2017 CAD (277 MBytes) for STEP version the robot we took to the championship event</a><br>
+        <a href="#" onclick="downloadFile('2017native');">Download 2017 CAD (438 MBytes) for Native SolidWorks 2016 version the robot we took to the championship event</a><br>
+        <a href="#" onclick="downloadFile('2017cableDriveArm');">2017 CAD for Off-Season Cable Drive Arm</a><br>
+        <a href="#" onclick="downloadFile('2017singleSpeedTrans');">2017 CAD for Off-Season Single Speed Tranmission</a><br>
+        <a href="#" onclick="downloadFile('2017squareDrivetrain');">2017 CAD for Off-Season Square Drivetrain with Ball Shifter Transmission</a><br>
+        More <a class="info" onclick="noAlert(event)" href="content/team-documents.html#2017Details">information and details</a> about the 2017 robot.
+      </p>
+      </div>
+    </div>
+
+    <!-- 2016 Season -->
+    <div id="content_box" style="width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2016_Robot_100x100a.jpg" width="100" border="0" align="left" alt="2016 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+      <p> 
+        <a href="#" onclick="downloadFile('2016champs');">Download 2016 CAD (242 MBytes) for the robot we took to the championship event</a><br>
+        <a href="#" onclick="downloadFile('2016rev1intake');">Download 2016 CAD (45 MBytes) for revision 1 of the intake</a>.  This intake was bagged with the robot and then replaced before our first competition.<br>
+        <a href="#" onclick="downloadFile('2016third');">Download 2016 CAD for Third Robot (112 MBytes)</a><br>
+        <a href="#" onclick="downloadFile('2016oct');">Download 2016 CAD for Off-Season Octagonal Drive Base (29 MBytes)</a><br>
+        <a href="#" onclick="downloadFile('2016rec');">Download 2016 CAD for Off-Season Rectangular Drive Base (42 MBytes)</a><br>
+        <a href="#" onclick="downloadFile('2016d2p2p');">Download 2016 CAD for Off-Season 2+2 Prototype Drive Base (54 MBytes)</a><br>
+        <a href="#" onclick="downloadFile('2016d2p2h');">Download 2016 CAD for Off-Season 2+2 Hybrid Drive Base (34 MBytes)</a><br>
+        <a href="#" onclick="downloadFile('2016minside');">Download 2016 CAD for Off-Season Minimized Siderail Drive Base (42 MBytes)</a><br>
+        More <a class="info" onclick="noAlert(event)" href="content/team-documents.html#2016Details">information and details</a> about the 2016 robot.
+      </p>
+      </div>
+    </div>
+
+    <!-- 2015 Season -->
+    <div id="content_box" style="height:135px;width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2015_Robot_100x100.jpg" width="100" border="0" align="left" alt="2015 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+      <p> 
+        Robot name: The closest we came for a name for this robot was Pandora<br>
+        <a href="#" onclick="downloadFile('2015');"> Download 2015 CAD (154 MBytes)</a><br>
+        <a href="#" onclick="downloadFile('2015third');"> Download 2015 CAD for Third Robot(258 MBytes)</a><br>
+        <a href="#" onclick="downloadFile('2015oct');"> Download 2015 CAD for Octagonal Drivebase (77 MBytes)</a><br>
+        <a href="#" onclick="downloadFile('2015rec');"> Download 2015 CAD for Rectangular Drivebase (25 MBytes)</a><br>
+        More <a class="info" onclick="noAlert(event)" href="content/team-documents.html#2015Details">information and details</a> about the 2015 robot.
+      </p>
+      </div>
+    </div>
+
+    <!-- 2014 Season -->
+    <div id="content_box" style="width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2014_RobotWithBumpersAndBall_100x100.jpg" width="100" border="0" align="left" alt="2014 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+      <p> 
+        Robot name: Mammoth<br>
+        <a href="#" onclick="downloadFile('2014');"> Download 2014 CAD (139 MBytes)</a><br>
+        <a href="#" onclick="downloadFile('2014c1');"> Download 2014 Offseason Configuration 1 CAD (70 MBytes)</a><br>
+        <a href="#" onclick="downloadFile('2014c2');"> Download 2014 Offseason Configuration 2 CAD (60 MBytes)</a><br>
+        <a href="#" onclick="downloadFile('2014c3');"> Download 2014 Offseason Configuration 3 CAD (56 MBytes)</a><br>
+        More <a class="info" onclick="noAlert(event)" href="content/team-documents.html#2014Details">information and details</a> about Mammoth
+      </p>
+      </div>
+    </div>
+
+    <!-- 2013 Season -->
+    <div id="content_box" style="height:115px;width:800px;border-style:solid;border-width:0px;border-color:lt-grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2013_Robot_100x100.jpg" width="100" border="0" align="left" alt="2013 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+        <p> 
+          Robot name: Dash<br>
+          <a href="#" onclick="downloadFile('2013')"> Download 2013 CAD (156 MBytes)</a><br>
+          More <a class='info' onclick="noAlert(event)" href="content/team-documents.html#2013Season">information</a> about Dash
+        </p>
+      </div>
+    </div>
+
+    <!-- 2012 Season -->
+    <div id="content_box" style="height:115px;width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2012_Robot_100x100.jpg" width="100" border="0" align="left" alt="2012 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+        <p> 
+          Robot name: Renegade<br>
+          <a href="#" onclick="downloadFile('2012')"> Download 2012 CAD (67 MBytes)</a><br>
+          More <a class="info" onclick="noAlert(event)" href="content/team-documents.html#2012Details">information and details</a> about Renegade
+        </p>
+      </div>
+    </div>
+
+    <!-- 2011 Season -->
+    <div id="content_box" style="height:115px;width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2011_Robot_100x100.jpg" width="100" border="0" align="left" alt="2011 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+        <p> 
+          Robot name: Havoc<br>
+          <a href="#" onclick="downloadFile('2011')"> Download 2011 CAD (69 MBytes)</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- 2010 Season -->
+    <div id="content_box" style="height:115px;width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2010_Robot_100x100.jpg" width="100" border="0" align="left" alt="2010 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+        <p> 
+          Robot name: Storm<br>
+          <a href="#" onclick="downloadFile('2010')"> Download 2010 CAD (23 MBytes)</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- 2009 Season -->
+    <div id="content_box" style="height:115px;width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2009_Robot_100x100.jpg" width="100" border="0" align="left" alt="2009 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+        <p> 
+          <a href="#" onclick="downloadFile('2009')"> Download 2009 CAD (36 MBytes)</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- 2008 Season -->
+    <div id="content_box" style="height:115px;width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2008_Robot_100x100.jpg" width="100" border="0" align="left" alt="2008 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+        <p> 
+          <a href="#" onclick="downloadFile('2008')"> Download 2008 CAD (50 MBytes)</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- 2007 Season -->
+    <div id="content_box" style="height:115px;width:800px;border-style:solid;border-width:0px;border-color:grey;border-top-width:1px">
+      <div id="content_box" style="width:100px">
+        <img src="images/cadDownloadForm/2007_Robot_100x100.jpg" width="100" border="0" align="left" alt="2007 Robot">
+      </div>
+      <div id="content_box" style="width:660px">
+        <p> 
+          <a href="#" onclick="downloadFile('2007')"> Download 2007 CAD (55 MBytes)</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</form>
+
+<hr>
+<h2>CAD Links for other teams</h2>
+<ul>
+  <li><a href="http://www.greybots.com/cad.html">973 - The Greybots</a></li>
+  <li><a href="http://www.simbotics.org/resources/cad">1114 - Simbotics</a></li>
+  </li>
+</ul>
+<p>
+    Please send us any additional links or changes by using our 
+    <a href="contact.html">team contact from</a> (select "CAD" in the "Category" drop
+    down menu so the correct person gets your message). 
+<p>
+</div>
+
+<!-- Parker added checkifshow() at the end to make the page show the links when the browser back button is hit.-->
+<script>checkifshow();</script>
+
+</body></html>
+</div></div></div>  </div>
+
+  
+  
+</div>
+  </div>
+</div>
+  </div>
+    </div>
+    
+    </div></div>
