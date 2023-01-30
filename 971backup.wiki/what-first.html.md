@@ -1,0 +1,4 @@
+   
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>FIRST, For Inspiration and Recognition of Science and Technology, is a fantastic program that gives students hands-on experience in engineering and technology. Students develop skills with machinery; generate ideas for solving difficult problems; produce results under time pressure; work together as a team; and learn “gracious professionalism” as they compete with teams from other schools.</p> <p>Every January, FIRST releases a new challenge and gives every team six weeks to design, build, test, and ship a competition-ready robot. Team 971 has been taking on the challenges and building robots to meet them every year since 2002.</p> <p>More information can be found at the <a href="http://www.firstinspires.org/" target="_blank">FIRST Website</a>

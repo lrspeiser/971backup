@@ -1,0 +1,8 @@
+
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>There are several keys used by our server. This page has information about them in a single, centralized location so it is easy to update and people can refer to it easily. Last updated 2014-04-10.</p><p>I (Brian) am not really sure that I'm getting all of the terminology right here, so do keep that in mind when looking at this. Also, if anybody actually knows the right words, please update this page and then remove this message.</p><h2 id=ssh>SSH Host Key</h2><p>This is the one that you will see in the prompt when first logging in to the server over SSH from a computer. The fingerprint is "ec:18:1e:50:53:bf:97:cb:a4:88:b5:3e:ed:ae:26:7c".</p><h2 id=ssl>SSL Certificate</h2><p>This is the one that you will have to confirm accepting when accessing the SVN repository (either with a web browser or an SVN client) because it is self-signed by Michael Schuh. The fingerprint (SHA1) is "2C 13 56 EE BE 16 49 A6 CF CF 71 90 EA B9 C5 43
+32 FB 7F 4D" (some tools may capitalize that differently or use other separators between the numbers). The current certificate is valid until 2015-05-15 12:18:56 PM.<br>
+It was changed on 2014-04-10 because of the <a href="https://www.us-cert.gov/ncas/alerts/TA14-098A">Heartbleed (CVE-2014-0160) vulnerability</a> which meant we couldn't trust that the old one wasn't compromised.</p></div></div></div>  </div>
+
+  

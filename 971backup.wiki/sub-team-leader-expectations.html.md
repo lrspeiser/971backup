@@ -1,0 +1,11 @@
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>Productive and effective sub-teams are an essential part of a high performing FRC team.  FIRST 971 sub-teams are formed as needed and their leaders are expected to do the following.</p><ul><li>Provide a mission plan for the sub-team and metrics for when it is successful.  This can be short like "Research, recommend, obtain authorization for purchase from Leadership Council, and purchase a new CNC Mill and Mill tools.  Provide safety and training materials.  Completed when approved by the Leadership Council."</li><li>Attend Leadership Council meeting to provide a status update and findings (e.g. update on CNC Mill research) or provide updates via email before the meeting if you cannot attend it.</li><li>Oversee the group itself.  Organize team members and meetings.  </li><li>As needed, develop a schedule and budget for the sub-team and present it to the Leadership Council. Keep the sub-team on schedule and within budget.  Notify the leadership council as soon as it becomes apparent that either of these may or will not be met.  Here are examples of a schedule and budget.<ul><li>Schedule<ul><li>1 month for researching CNC Mill</li><li>2 weeks for circulating the recommendation to the 971 team, collecting and incorporating 971 team feedback, and making a final recommendation</li><li>1 week to obtain authorization for purchase and making the purchase</li><li>2 months for delivery and making safety and training materials and seeking Leadership council approval for them</li><li>2 weeks for installing and verifying operation of the new CNC Mill</li></ul></li><li>Budget<ul><li>$2,500 for CNC Mill</li><li>$1,000 for CNC Mill tools</li></ul></li></ul></li><li>Alert the Leadership Council if the sub-team leader is unable to fulfill these responsibilities or needs addition help or resources.</li><li>The best way to communicate with the Leadership Council is to send email to them at the frcteam971leaders@googlegroups.com email list.</li></ul></div></div></div>  </div>
+
+  
+  
+</div>
+  </div>
+</div>
+  </div>
+    </div>
+ 
